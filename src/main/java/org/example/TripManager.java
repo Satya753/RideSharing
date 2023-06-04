@@ -73,12 +73,16 @@ public class TripManager {
 
     public String completeTrip(String tripid ){
         driverManager.completedRide(trips.get(tripid).getDriver_id());
-        return "Trip completed Successfully";
+        return "Trip completed Successfully you need to pay " + trips.get(tripid).getCost();
     }
 
 
 
     public String cancelTrip(String tripid){
+
+        if (trips.get(tripid)==null){
+            return "Trip doesn't exist";
+        }
         driverManager.completedRide(trips.get(tripid).getDriver_id());
         return "Trip cancelled successfully";
     }

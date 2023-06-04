@@ -28,7 +28,7 @@ public class Client {
          r1= new Rider("Ram Malik" , user_id);
          status = tripManager.createTrip(user_id , "Mumbai" , "Shimla" , 5);
         tripManager.getTripDetails(status);
-        tripManager.completeTrip(status);
+        System.out.println(tripManager.completeTrip(status));
         user_id = RandomGenerator.getDefault().toString();
          r1= new Rider("Ray Clayman" , user_id);
          status = tripManager.createTrip(user_id , "Delhi" , "Shimla" , 5);
